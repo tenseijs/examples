@@ -1590,17 +1590,17 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
-"@tensei/react-auth@^0.8.20":
-  version "0.8.20"
-  resolved "https://registry.yarnpkg.com/@tensei/react-auth/-/react-auth-0.8.20.tgz#c37fb18282fef031be27d82638e38894bb0c1045"
-  integrity sha512-brYCjhH29Q88N0aw49v8AoAfh3OElvZbNMFxZaDjA5Zsbr4WU1M2Q9lKDcCaITOjXBCgy6x9dzKb1Qqe9d2scA==
+"@tensei/react-auth@^0.8.21":
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/@tensei/react-auth/-/react-auth-0.8.21.tgz#5d7d6668593ebda4d260f414f30313fac2045ada"
+  integrity sha512-WAqeVutwBxnSwQEJFWj5Se63vmdMtIqm0AOgWUiHyawygIIerkTD55yhQBC+w1ILewTQhO0wUFzOZKqf2Deeiw==
   dependencies:
-    "@tensei/sdk" "^0.8.20"
+    "@tensei/sdk" "^0.8.21"
 
-"@tensei/sdk@^0.8.20":
-  version "0.8.20"
-  resolved "https://registry.yarnpkg.com/@tensei/sdk/-/sdk-0.8.20.tgz#b0a6e481396fd0301ff1095d65b22d1ab0a82d7b"
-  integrity sha512-WVC+N7P9Fgd6qe9v/JkMoTYQfWiFND0XAmUS466GPFhNupy+vRnIMLttZlGJMB1Gf4qkv5iy0CuIyo8j/ubg3A==
+"@tensei/sdk@^0.8.21":
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/@tensei/sdk/-/sdk-0.8.21.tgz#7910f77cd7e937c90bca30ba2d34f279e2852745"
+  integrity sha512-IRlxsWAbhZnAlJwsKYVy6/HskztGFcAdk2+tgpMMwR+v0nLmL+E2kZ+EMpd9dmcFPglA7MVvDAeCaWWNeXZ+Nw==
   dependencies:
     "@types/axios" "^0.14.0"
     axios "^0.21.1"
