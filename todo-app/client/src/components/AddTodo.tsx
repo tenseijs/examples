@@ -1,81 +1,71 @@
-import { Todo } from '@tensei/sdk'
 import React, { useState } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import tensei from '../client'
 
 export interface AddTodoInterface {
-    modal?: boolean;
-    toggle?: () => void;
-    fetchTasks: () => void;
+    fetchTodos: () => void;
 }
 
-const AddTodo: React.FunctionComponent<AddTodoInterface> = ({ modal, toggle, fetchTasks } ) => {
 
+const AddTodo: React.FunctionComponent<AddTodoInterface> = ({ fetchTodos }) => {
     const [todo, setTodo] = useState<string>('')
-    const [date, setDate] = useState<string>('')
+    const [submitted, setSubmitted] = useState(false) //state for showing Task added
+    const [error, setError] = useState(false) //state for showing the error
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.target
-
-        if(name === 'todo') {
+        const { value } = e.target
             setTodo(value)
-        } else {
-            setDate(value)
-        }
     }
 
-    const handleAddTodo = () =>  {
-        tensei.todos().insert({object: {
-            title: todo,
-            deadline: date,
-        }}).then(() => fetchTasks())
-
-        setDate('')
-        setTodo('')
+    //Add Todos
+    const handleAddTodo = () => {
+        if(todo !== '') {
+            tensei.todos().insert({object: {
+                title: todo,
+            }}).then(() => fetchTodos())
+            
+            setSubmitted(true)
+        } else {
+            setError(true)
+            setSubmitted(false)
+        }
+        
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        if(todo) {
+            setError(false)
+        }
+        setTodo('')
     }
-    
+
     return (
+
         <>
-            <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}>Todo List</ModalHeader>
-                <ModalBody>
-                    <form className='form' onSubmit={handleSubmit}>
-                        <div className='form-group'>
-                            <label className='form-label'>Add Todo</label>
-                            <input 
-                                type='text'
-                                className='form-control' 
-                                placeholder='Type in your todo'
-                                name =  'todo' 
-                                value= {todo}
-                                onChange = {handleInputChange}
-                            />
-
-                            <label className='form-label mt-4'>Set a Deadline</label>
-                            <input 
-                                type='date' 
-                                className='form-control mt-3' 
-                                placeholder='Set task deadline'
-                                name = 'date'
-                                value= {date} 
-                                onChange = {handleInputChange}
-    />
-                        </div>     
+                <div className="box">
+                    <h2 className="title">New Todo</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="field has-addons">
+                            <div className="control is-expanded">
+                                <input 
+                                    className="input" 
+                                    type="text" 
+                                    placeholder="Todo title" 
+                                    name="todo" 
+                                    value={todo}
+                                    onChange = {handleInputChange}
+                                />
+                                 {error ? <p className="help is-danger">Todo is required</p> : null }
+                            </div>
+                            <div className="control">
+                                <button type="submit" className="button is-primary" onClick={handleAddTodo}  >
+                                    Add Todo
+                                </button>
+                            </div>
+                        </div>
                     </form>
-                </ModalBody>
-                <ModalFooter>
-                <Button color="primary" onClick={handleAddTodo}>Add Todo</Button>{' '}
-                <Button color="secondary" onClick={toggle}>Cancel</Button>
-                </ModalFooter>
-            </Modal>
-
-            <div>
-               
-            </div>
+                </div>
+                {submitted ? <div className="notification is-success">Todo added!</div> : null}
         </>
     )
 }

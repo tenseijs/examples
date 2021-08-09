@@ -8,11 +8,25 @@ interface TodosInterface {
 }
 
 const Todos: React.FunctionComponent<TodosInterface> = ({ todos, onDelete }) => {
-    
-    return (
-        <div>    
-           {todos.map((todo: Todo, index: number) => <TodoItem key={index} todo={todo} onDelete={onDelete} />)}
-        </div> 
+    console.log(todos)
+    return (     
+        <>
+            <div className="box">
+                <h1 className="title">Todo Lists</h1>
+                <table className="table is-bordered is-striped is-narrow is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Title</th>
+                            <th>Action</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {todos.map((todo:Todo, index: number) => <TodoItem key={todo.id} todo={todo} onDelete={onDelete} serialNumber={index} />)}
+                    </tbody>
+                </table>
+            </div>
+      </>
     )
 }
 

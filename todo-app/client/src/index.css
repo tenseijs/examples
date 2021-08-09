@@ -1,52 +1,13 @@
-/*body{
-  background-color: #9266ff;
-}*/
-
-.App{
-  background-color: #fff;
-  height: auto;
-  width: 500px;
-  margin: 50px auto !important;
-  padding-bottom: 10px !important;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 15px 10px;
-  background-color: #c91e1f;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
-
-h2 {
-  color: #fff;
-}
-
-h3, p {
-  font-size: 18px;
-}
-
-.btns {
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  padding: 7px 12px !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.text-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: #555;
-  width: 80%;
-  margin: 20px auto;
-  height: 50px;
-  background-color: #f4f4f4;
-  font-family: bold;
-  border-radius: 40px;
-}
-
