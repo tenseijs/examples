@@ -52,7 +52,7 @@ export default function Home(props: HomeProps) {
 
         <ul className="list-group">
           {todos?.map(todo => (
-            <li key={todo?.id} className="list-group-item d-flex aign-items-center justify-content-between">
+            <li key={todo?.id} data-testid={`todo-${todo?.id}`} className="list-group-item d-flex aign-items-center justify-content-between">
               {todo?.title}
               <button type="button" onClick={() => onDelete(todo?.id!)} className="btn btn-outline-danger btn-sm">Remove</button>
             </li>
