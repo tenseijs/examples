@@ -9,11 +9,10 @@ export interface AddTodoInterface {
 const AddTodo: React.FunctionComponent<AddTodoInterface> = ({ fetchTodos }) => {
     const [todo, setTodo] = useState<string>('')
     const [submitted, setSubmitted] = useState(false) //state for showing Task added
-    const [error, setError] = useState(false) //state for showing the error
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target
-            setTodo(value)
+        setTodo(value)
     }
 
     //Add Todos
@@ -24,18 +23,11 @@ const AddTodo: React.FunctionComponent<AddTodoInterface> = ({ fetchTodos }) => {
             }}).then(() => fetchTodos())
             
             setSubmitted(true)
-        } else {
-            setError(true)
-            setSubmitted(false)
-        }
-        
+        } 
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if(todo) {
-            setError(false)
-        }
         setTodo('')
     }
 
@@ -55,7 +47,6 @@ const AddTodo: React.FunctionComponent<AddTodoInterface> = ({ fetchTodos }) => {
                                     value={todo}
                                     onChange = {handleInputChange}
                                 />
-                                 {error ? <p className="help is-danger">Todo is required</p> : null }
                             </div>
                             <div className="control">
                                 <button type="submit" className="button is-primary" onClick={handleAddTodo}  >
