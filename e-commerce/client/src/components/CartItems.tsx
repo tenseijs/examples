@@ -1,11 +1,11 @@
 import React from 'react'
 
 const CartItems = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
 export default CartItems

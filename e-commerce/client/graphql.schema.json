@@ -9,1871 +9,6 @@
     "subscriptionType": null,
     "types": [
       {
-        "kind": "OBJECT",
-        "name": "AdminPermission",
-        "description": null,
-        "fields": [
-          {
-            "name": "adminRoles",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "orderBy",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminRoleQueryOrder",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminRoleWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "AdminRole",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminRolesCount",
-            "description": null,
-            "args": [
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminRoleWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminPermissionQueryOrder",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminPermissionSubscriptionFilter",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "adminRoles",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminRoleSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminPermissionWhereQuery",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "_and",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminPermissionWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_not",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminPermissionWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_or",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminPermissionWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminRoles",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminRoleWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "AdminRole",
-        "description": null,
-        "fields": [
-          {
-            "name": "adminPermissions",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "orderBy",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminPermissionQueryOrder",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminPermissionWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "AdminPermission",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminPermissionsCount",
-            "description": null,
-            "args": [
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminPermissionWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminUsers",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "orderBy",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminUserQueryOrder",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminUserWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "AdminUser",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminUsersCount",
-            "description": null,
-            "args": [
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminUserWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "description",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminRoleQueryOrder",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminRoleSubscriptionFilter",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "adminPermissions",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminPermissionSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminUsers",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminUserSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "description",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminRoleWhereQuery",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "_and",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminRoleWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_not",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminRoleWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_or",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminRoleWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminPermissions",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminPermissionWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminUsers",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminUserWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "description",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "AdminToken",
-        "description": null,
-        "fields": [
-          {
-            "name": "adminUser",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "AdminUser",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "expiresAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "token",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "type",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "ENUM",
-              "name": "AdminTokenTypeEnum",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminTokenQueryOrder",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminTokenSubscriptionFilter",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "adminUser",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminUserSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "expiresAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "token",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "type",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "ENUM",
-        "name": "AdminTokenTypeEnum",
-        "description": null,
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": [
-          {
-            "name": "PASSWORDLESS",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminTokenWhereQuery",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "_and",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminTokenWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_not",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminTokenWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_or",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminTokenWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminUser",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminUserWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "expiresAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "token",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "type",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "AdminUser",
-        "description": null,
-        "fields": [
-          {
-            "name": "active",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminRoles",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "orderBy",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminRoleQueryOrder",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminRoleWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "AdminRole",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminRolesCount",
-            "description": null,
-            "args": [
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "AdminRoleWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "email",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "fullName",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminUserQueryOrder",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "active",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "email",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "fullName",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminUserSubscriptionFilter",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "active",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminRoles",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminRoleSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "email",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "fullName",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "AdminUserWhereQuery",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "_and",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminUserWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_not",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminUserWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_or",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "AdminUserWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "active",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "adminRoles",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "AdminRoleWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "email",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "fullName",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
         "kind": "SCALAR",
         "name": "Boolean",
         "description": "The `Boolean` scalar type represents `true` or `false`.",
@@ -1952,6 +87,22 @@
             "defaultValue": null,
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "quantity",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "interfaces": null,
@@ -1995,6 +146,26 @@
             "defaultValue": null,
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "roles",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "RoleString",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "interfaces": null,
@@ -2007,776 +178,6 @@
         "description": null,
         "fields": null,
         "inputFields": null,
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "File",
-        "description": null,
-        "fields": [
-          {
-            "name": "altText",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "disk",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "diskMeta",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "extension",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "file",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "File",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "hash",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "height",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "mimeType",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "path",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "size",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "transformations",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "orderBy",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileQueryOrder",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "File",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "transformationsCount",
-            "description": null,
-            "args": [
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "width",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "FileQueryOrder",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "ENUM",
-              "name": "QueryOrder",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "FileSubscriptionFilter",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "altText",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "disk",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "diskMeta",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "extension",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "file",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "FileSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "hash",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "height",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "mimeType",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "path",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "size",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "transformations",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "FileSubscriptionFilter",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "width",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "FileWhereQuery",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "_and",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "FileWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_not",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "FileWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "_or",
-            "description": null,
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "INPUT_OBJECT",
-                "name": "FileWhereQuery",
-                "ofType": null
-              }
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "altText",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "disk",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "diskMeta",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "extension",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "file",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "FileWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "hash",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "height",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "id",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IdWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "mimeType",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "path",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "size",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "transformations",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "FileWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "width",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringWhereQuery",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
         "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
@@ -3472,64 +873,6 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "User",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "deleteFile",
-            "description": null,
-            "args": [
-              {
-                "name": "id",
-                "description": null,
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "File",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "deleteManyFiles",
-            "description": null,
-            "args": [
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "File",
                 "ofType": null
               }
             },
@@ -4238,6 +1581,53 @@
       },
       {
         "kind": "OBJECT",
+        "name": "Permission",
+        "description": null,
+        "fields": [
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "Product",
         "description": null,
         "fields": [
@@ -4307,6 +1697,18 @@
           },
           {
             "name": "price",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "quantity",
             "description": null,
             "args": [],
             "type": {
@@ -4438,6 +1840,18 @@
           },
           {
             "name": "price",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "quantity",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -4588,6 +2002,18 @@
             "deprecationReason": null
           },
           {
+            "name": "quantity",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "updatedAt",
             "description": null,
             "type": {
@@ -4619,153 +2045,6 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "User",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "file",
-            "description": null,
-            "args": [
-              {
-                "name": "id",
-                "description": null,
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "File",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "files",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "orderBy",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileQueryOrder",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "File",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "filesCount",
-            "description": null,
-            "args": [
-              {
-                "name": "limit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "offset",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "where",
-                "description": null,
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "FileWhereQuery",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Int",
                 "ofType": null
               }
             },
@@ -5118,6 +2397,86 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "Role",
+        "description": null,
+        "fields": [
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "permissions",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Permission",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "RoleString",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "NOOB",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
         "kind": "SCALAR",
         "name": "String",
         "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
@@ -5375,6 +2734,18 @@
             "defaultValue": null,
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "quantity",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "interfaces": null,
@@ -5398,6 +2769,26 @@
             "defaultValue": null,
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "roles",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "RoleString",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "interfaces": null,
@@ -5409,6 +2800,38 @@
         "name": "User",
         "description": null,
         "fields": [
+          {
+            "name": "allPermissions",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Permission",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "allRoles",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Role",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "createdAt",
             "description": null,
@@ -5448,6 +2871,26 @@
                 "kind": "SCALAR",
                 "name": "ID",
                 "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "roles",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "RoleString",
+                  "ofType": null
+                }
               }
             },
             "isDeprecated": false,
@@ -5513,6 +2956,30 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "allPermissions",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "allRoles",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "createdAt",
             "description": null,
             "type": {
@@ -5542,6 +3009,18 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "IdWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "roles",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
               "ofType": null
             },
             "defaultValue": null,
@@ -5616,6 +3095,30 @@
             "deprecationReason": null
           },
           {
+            "name": "allPermissions",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "allRoles",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "createdAt",
             "description": null,
             "type": {
@@ -5645,6 +3148,18 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "IdWhereQuery",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "roles",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringWhereQuery",
               "ofType": null
             },
             "defaultValue": null,

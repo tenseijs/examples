@@ -1,5 +1,5 @@
 overwrite: true
-schema: "http://localhost:8810/graphql"
+schema: "http://127.0.0.1:8810/graphql"
 documents: "src/**/*.graphql"
 generates:
   src/generated/index.ts:
@@ -12,4 +12,4 @@ generates:
       - "introspection"
     config:
         fetcher:
-            endpoint: 'http://localhost:8810/graphql'
+            endpoint: "http://127.0.0.1:8810/graphql"

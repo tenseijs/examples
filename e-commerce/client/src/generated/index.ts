@@ -37,317 +37,18 @@ export type Scalars = {
   JSONObject: any;
 };
 
-export type AdminPermission = {
-  __typename?: 'AdminPermission';
-  adminRoles?: Maybe<Array<Maybe<AdminRole>>>;
-  adminRolesCount?: Maybe<Scalars['Int']>;
-  createdAt?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  name?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
-  updatedAt?: Maybe<Scalars['String']>;
-};
-
-
-export type AdminPermissionAdminRolesArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<AdminRoleQueryOrder>;
-  where?: Maybe<AdminRoleWhereQuery>;
-};
-
-
-export type AdminPermissionAdminRolesCountArgs = {
-  where?: Maybe<AdminRoleWhereQuery>;
-};
-
-export type AdminPermissionQueryOrder = {
-  createdAt?: Maybe<QueryOrder>;
-  updatedAt?: Maybe<QueryOrder>;
-};
-
-export type AdminPermissionSubscriptionFilter = {
-  adminRoles?: Maybe<AdminRoleSubscriptionFilter>;
-  createdAt?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  name?: Maybe<StringWhereQuery>;
-  slug?: Maybe<StringWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export type AdminPermissionWhereQuery = {
-  _and?: Maybe<Array<Maybe<AdminPermissionWhereQuery>>>;
-  _not?: Maybe<AdminPermissionWhereQuery>;
-  _or?: Maybe<Array<Maybe<AdminPermissionWhereQuery>>>;
-  adminRoles?: Maybe<AdminRoleWhereQuery>;
-  createdAt?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  name?: Maybe<StringWhereQuery>;
-  slug?: Maybe<StringWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export type AdminRole = {
-  __typename?: 'AdminRole';
-  adminPermissions?: Maybe<Array<Maybe<AdminPermission>>>;
-  adminPermissionsCount?: Maybe<Scalars['Int']>;
-  adminUsers?: Maybe<Array<Maybe<AdminUser>>>;
-  adminUsersCount?: Maybe<Scalars['Int']>;
-  createdAt?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  name?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
-  updatedAt?: Maybe<Scalars['String']>;
-};
-
-
-export type AdminRoleAdminPermissionsArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<AdminPermissionQueryOrder>;
-  where?: Maybe<AdminPermissionWhereQuery>;
-};
-
-
-export type AdminRoleAdminPermissionsCountArgs = {
-  where?: Maybe<AdminPermissionWhereQuery>;
-};
-
-
-export type AdminRoleAdminUsersArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<AdminUserQueryOrder>;
-  where?: Maybe<AdminUserWhereQuery>;
-};
-
-
-export type AdminRoleAdminUsersCountArgs = {
-  where?: Maybe<AdminUserWhereQuery>;
-};
-
-export type AdminRoleQueryOrder = {
-  createdAt?: Maybe<QueryOrder>;
-  name?: Maybe<QueryOrder>;
-  slug?: Maybe<QueryOrder>;
-  updatedAt?: Maybe<QueryOrder>;
-};
-
-export type AdminRoleSubscriptionFilter = {
-  adminPermissions?: Maybe<AdminPermissionSubscriptionFilter>;
-  adminUsers?: Maybe<AdminUserSubscriptionFilter>;
-  createdAt?: Maybe<StringWhereQuery>;
-  description?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  name?: Maybe<StringWhereQuery>;
-  slug?: Maybe<StringWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export type AdminRoleWhereQuery = {
-  _and?: Maybe<Array<Maybe<AdminRoleWhereQuery>>>;
-  _not?: Maybe<AdminRoleWhereQuery>;
-  _or?: Maybe<Array<Maybe<AdminRoleWhereQuery>>>;
-  adminPermissions?: Maybe<AdminPermissionWhereQuery>;
-  adminUsers?: Maybe<AdminUserWhereQuery>;
-  createdAt?: Maybe<StringWhereQuery>;
-  description?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  name?: Maybe<StringWhereQuery>;
-  slug?: Maybe<StringWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export type AdminToken = {
-  __typename?: 'AdminToken';
-  adminUser?: Maybe<AdminUser>;
-  createdAt?: Maybe<Scalars['String']>;
-  expiresAt?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  token?: Maybe<Scalars['String']>;
-  type?: Maybe<AdminTokenTypeEnum>;
-  updatedAt?: Maybe<Scalars['String']>;
-};
-
-export type AdminTokenQueryOrder = {
-  createdAt?: Maybe<QueryOrder>;
-  updatedAt?: Maybe<QueryOrder>;
-};
-
-export type AdminTokenSubscriptionFilter = {
-  adminUser?: Maybe<AdminUserSubscriptionFilter>;
-  createdAt?: Maybe<StringWhereQuery>;
-  expiresAt?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  token?: Maybe<StringWhereQuery>;
-  type?: Maybe<StringWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export enum AdminTokenTypeEnum {
-  Passwordless = 'PASSWORDLESS'
-}
-
-export type AdminTokenWhereQuery = {
-  _and?: Maybe<Array<Maybe<AdminTokenWhereQuery>>>;
-  _not?: Maybe<AdminTokenWhereQuery>;
-  _or?: Maybe<Array<Maybe<AdminTokenWhereQuery>>>;
-  adminUser?: Maybe<AdminUserWhereQuery>;
-  createdAt?: Maybe<StringWhereQuery>;
-  expiresAt?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  token?: Maybe<StringWhereQuery>;
-  type?: Maybe<StringWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export type AdminUser = {
-  __typename?: 'AdminUser';
-  active?: Maybe<Scalars['Boolean']>;
-  adminRoles?: Maybe<Array<Maybe<AdminRole>>>;
-  adminRolesCount?: Maybe<Scalars['Int']>;
-  createdAt?: Maybe<Scalars['String']>;
-  email: Scalars['String'];
-  fullName?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  updatedAt?: Maybe<Scalars['String']>;
-};
-
-
-export type AdminUserAdminRolesArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<AdminRoleQueryOrder>;
-  where?: Maybe<AdminRoleWhereQuery>;
-};
-
-
-export type AdminUserAdminRolesCountArgs = {
-  where?: Maybe<AdminRoleWhereQuery>;
-};
-
-export type AdminUserQueryOrder = {
-  active?: Maybe<QueryOrder>;
-  createdAt?: Maybe<QueryOrder>;
-  email?: Maybe<QueryOrder>;
-  fullName?: Maybe<QueryOrder>;
-  updatedAt?: Maybe<QueryOrder>;
-};
-
-export type AdminUserSubscriptionFilter = {
-  active?: Maybe<StringWhereQuery>;
-  adminRoles?: Maybe<AdminRoleSubscriptionFilter>;
-  createdAt?: Maybe<StringWhereQuery>;
-  email?: Maybe<StringWhereQuery>;
-  fullName?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
-export type AdminUserWhereQuery = {
-  _and?: Maybe<Array<Maybe<AdminUserWhereQuery>>>;
-  _not?: Maybe<AdminUserWhereQuery>;
-  _or?: Maybe<Array<Maybe<AdminUserWhereQuery>>>;
-  active?: Maybe<StringWhereQuery>;
-  adminRoles?: Maybe<AdminRoleWhereQuery>;
-  createdAt?: Maybe<StringWhereQuery>;
-  email?: Maybe<StringWhereQuery>;
-  fullName?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-};
-
 export type CreateProductInput = {
   description: Scalars['String'];
   image: Scalars['String'];
   name: Scalars['String'];
   price: Scalars['String'];
+  quantity: Scalars['Int'];
 };
 
 export type CreateUserInput = {
   email: Scalars['String'];
   password: Scalars['String'];
-};
-
-export type File = {
-  __typename?: 'File';
-  altText?: Maybe<Scalars['String']>;
-  createdAt?: Maybe<Scalars['String']>;
-  disk?: Maybe<Scalars['String']>;
-  diskMeta?: Maybe<Scalars['String']>;
-  extension?: Maybe<Scalars['String']>;
-  file?: Maybe<File>;
-  hash?: Maybe<Scalars['String']>;
-  height?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  mimeType?: Maybe<Scalars['String']>;
-  name?: Maybe<Scalars['String']>;
-  path?: Maybe<Scalars['String']>;
-  size?: Maybe<Scalars['String']>;
-  transformations?: Maybe<Array<Maybe<File>>>;
-  transformationsCount?: Maybe<Scalars['Int']>;
-  updatedAt?: Maybe<Scalars['String']>;
-  width?: Maybe<Scalars['String']>;
-};
-
-
-export type FileTransformationsArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<FileQueryOrder>;
-  where?: Maybe<FileWhereQuery>;
-};
-
-
-export type FileTransformationsCountArgs = {
-  where?: Maybe<FileWhereQuery>;
-};
-
-export type FileQueryOrder = {
-  createdAt?: Maybe<QueryOrder>;
-  updatedAt?: Maybe<QueryOrder>;
-};
-
-export type FileSubscriptionFilter = {
-  altText?: Maybe<StringWhereQuery>;
-  createdAt?: Maybe<StringWhereQuery>;
-  disk?: Maybe<StringWhereQuery>;
-  diskMeta?: Maybe<StringWhereQuery>;
-  extension?: Maybe<StringWhereQuery>;
-  file?: Maybe<FileSubscriptionFilter>;
-  hash?: Maybe<StringWhereQuery>;
-  height?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  mimeType?: Maybe<StringWhereQuery>;
-  name?: Maybe<StringWhereQuery>;
-  path?: Maybe<StringWhereQuery>;
-  size?: Maybe<StringWhereQuery>;
-  transformations?: Maybe<FileSubscriptionFilter>;
-  updatedAt?: Maybe<StringWhereQuery>;
-  width?: Maybe<StringWhereQuery>;
-};
-
-export type FileWhereQuery = {
-  _and?: Maybe<Array<Maybe<FileWhereQuery>>>;
-  _not?: Maybe<FileWhereQuery>;
-  _or?: Maybe<Array<Maybe<FileWhereQuery>>>;
-  altText?: Maybe<StringWhereQuery>;
-  createdAt?: Maybe<StringWhereQuery>;
-  disk?: Maybe<StringWhereQuery>;
-  diskMeta?: Maybe<StringWhereQuery>;
-  extension?: Maybe<StringWhereQuery>;
-  file?: Maybe<FileWhereQuery>;
-  hash?: Maybe<StringWhereQuery>;
-  height?: Maybe<StringWhereQuery>;
-  id?: Maybe<IdWhereQuery>;
-  mimeType?: Maybe<StringWhereQuery>;
-  name?: Maybe<StringWhereQuery>;
-  path?: Maybe<StringWhereQuery>;
-  size?: Maybe<StringWhereQuery>;
-  transformations?: Maybe<FileWhereQuery>;
-  updatedAt?: Maybe<StringWhereQuery>;
-  width?: Maybe<StringWhereQuery>;
+  roles?: Maybe<Array<RoleString>>;
 };
 
 export type IdWhereQuery = {
@@ -403,8 +104,6 @@ export type Mutation = {
   createManyUsers: Array<Maybe<User>>;
   createProduct: Product;
   createUser: User;
-  deleteFile?: Maybe<File>;
-  deleteManyFiles?: Maybe<Array<Maybe<File>>>;
   deleteManyProducts?: Maybe<Array<Maybe<Product>>>;
   deleteProduct?: Maybe<Product>;
   login: LoginResponse;
@@ -435,16 +134,6 @@ export type MutationCreateProductArgs = {
 
 export type MutationCreateUserArgs = {
   object: CreateUserInput;
-};
-
-
-export type MutationDeleteFileArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type MutationDeleteManyFilesArgs = {
-  where?: Maybe<FileWhereQuery>;
 };
 
 
@@ -534,6 +223,13 @@ export type PasswordResetWhereQuery = {
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
+export type Permission = {
+  __typename?: 'Permission';
+  description?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+};
+
 export type Product = {
   __typename?: 'Product';
   createdAt?: Maybe<Scalars['String']>;
@@ -542,6 +238,7 @@ export type Product = {
   image?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['String']>;
+  quantity?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['String']>;
 };
 
@@ -557,6 +254,7 @@ export type ProductSubscriptionFilter = {
   image?: Maybe<StringWhereQuery>;
   name?: Maybe<StringWhereQuery>;
   price?: Maybe<StringWhereQuery>;
+  quantity?: Maybe<StringWhereQuery>;
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
@@ -570,38 +268,16 @@ export type ProductWhereQuery = {
   image?: Maybe<StringWhereQuery>;
   name?: Maybe<StringWhereQuery>;
   price?: Maybe<StringWhereQuery>;
+  quantity?: Maybe<StringWhereQuery>;
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
 export type Query = {
   __typename?: 'Query';
   authenticated: User;
-  file?: Maybe<File>;
-  files?: Maybe<Array<Maybe<File>>>;
-  filesCount: Scalars['Int'];
   product?: Maybe<Product>;
   products?: Maybe<Array<Maybe<Product>>>;
   productsCount: Scalars['Int'];
-};
-
-
-export type QueryFileArgs = {
-  id: Scalars['ID'];
-};
-
-
-export type QueryFilesArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  orderBy?: Maybe<FileQueryOrder>;
-  where?: Maybe<FileWhereQuery>;
-};
-
-
-export type QueryFilesCountArgs = {
-  limit?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  where?: Maybe<FileWhereQuery>;
 };
 
 
@@ -651,6 +327,18 @@ export type ResetPasswordInput = {
   token: Scalars['String'];
 };
 
+export type Role = {
+  __typename?: 'Role';
+  description?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  permissions?: Maybe<Array<Maybe<Permission>>>;
+  slug?: Maybe<Scalars['String']>;
+};
+
+export enum RoleString {
+  Noob = 'NOOB'
+}
+
 export type StringWhereQuery = {
   _contained?: Maybe<Scalars['String']>;
   _contains?: Maybe<Scalars['String']>;
@@ -673,17 +361,22 @@ export type UpdateProductInput = {
   image?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['String']>;
+  quantity?: Maybe<Scalars['Int']>;
 };
 
 export type UpdateUserInput = {
   email?: Maybe<Scalars['String']>;
+  roles?: Maybe<Array<RoleString>>;
 };
 
 export type User = {
   __typename?: 'User';
+  allPermissions?: Maybe<Array<Maybe<Permission>>>;
+  allRoles?: Maybe<Array<Maybe<Role>>>;
   createdAt?: Maybe<Scalars['String']>;
   email: Scalars['String'];
   id: Scalars['ID'];
+  roles?: Maybe<Array<RoleString>>;
   updatedAt?: Maybe<Scalars['String']>;
 };
 
@@ -693,9 +386,12 @@ export type UserQueryOrder = {
 };
 
 export type UserSubscriptionFilter = {
+  allPermissions?: Maybe<StringWhereQuery>;
+  allRoles?: Maybe<StringWhereQuery>;
   createdAt?: Maybe<StringWhereQuery>;
   email?: Maybe<StringWhereQuery>;
   id?: Maybe<IdWhereQuery>;
+  roles?: Maybe<StringWhereQuery>;
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
@@ -703,27 +399,31 @@ export type UserWhereQuery = {
   _and?: Maybe<Array<Maybe<UserWhereQuery>>>;
   _not?: Maybe<UserWhereQuery>;
   _or?: Maybe<Array<Maybe<UserWhereQuery>>>;
+  allPermissions?: Maybe<StringWhereQuery>;
+  allRoles?: Maybe<StringWhereQuery>;
   createdAt?: Maybe<StringWhereQuery>;
   email?: Maybe<StringWhereQuery>;
   id?: Maybe<IdWhereQuery>;
+  roles?: Maybe<StringWhereQuery>;
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
 export type ProductsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ProductsQuery = { __typename?: 'Query', products?: Array<{ __typename?: 'Product', id: string, image?: string | null | undefined, name?: string | null | undefined, price?: string | null | undefined, description?: string | null | undefined } | null | undefined> | null | undefined };
+export type ProductsQuery = { __typename?: 'Query', products?: Array<{ __typename?: 'Product', id: string, image?: string | null | undefined, name?: string | null | undefined, price?: string | null | undefined, description?: string | null | undefined, quantity?: string | null | undefined } | null | undefined> | null | undefined };
 
 
 export const ProductsDocument = `
     query Products {
-      products {
-        id
-        image
-        name
-        price
-        description
-      }
+  products {
+    id
+    image
+    name
+    price
+    description
+    quantity
+  }
 }
     `;
 export const useProductsQuery = <
