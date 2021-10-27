@@ -1,36 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CartItem } from "../App";
 
+//import logo from "../images/logo.png"
+//console.log(logo)
 
-/*type NavbarProp = {
-  cartItems: Product[];
-}*/
+type NavbarProp = {
+  cartItems: CartItem[];
+};
 
-const Navbar: React.FunctionComponent = () => {
-  /*const getCartTotal = (products: Product[]) =>
-    products.reduce((accumulator: number, product) => accumulator + product.amount, 0)*/
+const Navbar: React.FunctionComponent<NavbarProp> = ({ cartItems }) => {
+  const getCartTotal = (products: CartItem[]) =>
+    products.reduce(
+      (accumulator: number, product) => accumulator + product.quantity,
+      0
+    );
 
   return (
-    <nav
-      className="navbar is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div className="navbar-brand"></div>
-      <div className="navbar-menu">
-        <div className="navbar-start navbar-item is-size-4">
-          <b style={{ color: "#fff" }} className="is-italic has-text-weight-light">The Ice Cream Shop</b>
-        </div>
-
-        <div className="navbar-end navbar-item is-size-2">
-          <Link to="/cart">
-            <i className="fa fa-shopping-cart" style={{ color: "#fff" }}>
-              <sup>0</sup>
-            </i>
-          </Link>
-        </div>
+    <div className="flex justify-between mr-20 mt-6">
+      <h1 className="text-xl text-gray-700">The Ice Cream Shop</h1>
+      <div className="text-2xl text-indigo-400">
+        <Link to="/cart">
+          <i className="fa fa-shopping-cart">
+            <sup>{getCartTotal(cartItems)}</sup>
+          </i>
+        </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 
