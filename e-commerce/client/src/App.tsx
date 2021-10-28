@@ -8,6 +8,7 @@ import { Product, ProductsQuery, useProductsQuery } from "./generated";
 import Navbar from "./components/Navbar";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
+import {Checkout} from './components/Checkout'
 
 export interface CartItem {
   product: Product;
@@ -104,6 +105,9 @@ const App = () => {
                   onRemoveFromCart={onRemoveFromCart}
                 />
               </Route>
+              <Route path='/checkout'>
+                <Checkout cartItems={cartItems} />
+                </Route>
             </Switch>
           </Router>
         </div>

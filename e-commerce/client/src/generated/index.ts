@@ -1,4 +1,4 @@
-import { useQuery, UseQueryOptions } from 'react-query';
+import { useQuery, UseQueryOptions, useMutation, UseMutationOptions } from 'react-query';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
@@ -102,6 +102,7 @@ export type Mutation = {
   __typename?: 'Mutation';
   createManyProducts: Array<Maybe<Product>>;
   createManyUsers: Array<Maybe<User>>;
+  createPaymentIntent: Scalars['String'];
   createProduct: Product;
   createUser: User;
   deleteManyProducts?: Maybe<Array<Maybe<Product>>>;
@@ -124,6 +125,11 @@ export type MutationCreateManyProductsArgs = {
 
 export type MutationCreateManyUsersArgs = {
   objects: Array<Maybe<CreateUserInput>>;
+};
+
+
+export type MutationCreatePaymentIntentArgs = {
+  productCartItems: Array<Maybe<ProductCartItem>>;
 };
 
 
@@ -240,6 +246,11 @@ export type Product = {
   price?: Maybe<Scalars['String']>;
   quantity?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['String']>;
+};
+
+export type ProductCartItem = {
+  productId?: Maybe<Scalars['ID']>;
+  quantity?: Maybe<Scalars['Int']>;
 };
 
 export type ProductQueryOrder = {
@@ -413,6 +424,13 @@ export type ProductsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type ProductsQuery = { __typename?: 'Query', products?: Array<{ __typename?: 'Product', id: string, image?: string | null | undefined, name?: string | null | undefined, price?: string | null | undefined, description?: string | null | undefined, quantity?: string | null | undefined } | null | undefined> | null | undefined };
 
+export type CreatePaymentIntentMutationVariables = Exact<{
+  productCartItems: Array<Maybe<ProductCartItem>> | Maybe<ProductCartItem>;
+}>;
+
+
+export type CreatePaymentIntentMutation = { __typename?: 'Mutation', createPaymentIntent: string };
+
 
 export const ProductsDocument = `
     query Products {
@@ -437,5 +455,21 @@ export const useProductsQuery = <
     useQuery<ProductsQuery, TError, TData>(
       variables === undefined ? ['Products'] : ['Products', variables],
       fetcher<ProductsQuery, ProductsQueryVariables>(dataSource.endpoint, dataSource.fetchParams || {}, ProductsDocument, variables),
+      options
+    );
+export const CreatePaymentIntentDocument = `
+    mutation createPaymentIntent($productCartItems: [ProductCartItem]!) {
+  createPaymentIntent(productCartItems: $productCartItems)
+}
+    `;
+export const useCreatePaymentIntentMutation = <
+      TError = unknown,
+      TContext = unknown
+    >(
+      dataSource: { endpoint: string, fetchParams?: RequestInit },
+      options?: UseMutationOptions<CreatePaymentIntentMutation, TError, CreatePaymentIntentMutationVariables, TContext>
+    ) =>
+    useMutation<CreatePaymentIntentMutation, TError, CreatePaymentIntentMutationVariables, TContext>(
+      (variables?: CreatePaymentIntentMutationVariables) => fetcher<CreatePaymentIntentMutation, CreatePaymentIntentMutationVariables>(dataSource.endpoint, dataSource.fetchParams || {}, CreatePaymentIntentDocument, variables)(),
       options
     );

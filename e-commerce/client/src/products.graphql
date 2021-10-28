@@ -8,3 +8,7 @@ query Products {
       quantity
     }
 }
+
+mutation createPaymentIntent($productCartItems: [ProductCartItem]!) {
+  createPaymentIntent(productCartItems: $productCartItems)
+}

@@ -80,17 +80,7 @@ const Cart: React.FunctionComponent<CartProps> = ({
         <br /><br /><br />
         {cartItems.length === 0 ? null : (
           <span className="float-right">
-            <StripeCheckout
-              label="Checkout"
-              name="The Ice Cream Shop"
-              billingAddress
-              shippingAddress
-              description={`Your total is $${getTotal(cartItems)}`}
-              amount={getStripeTotal(cartItems)}
-              panelLabel="Pay Now"
-              token={onToken}
-              stripeKey="pk_test_51JjsxtJnZnb1n2GnfjKt0Q0Qt34aNbuKJYhirnowSUtgAP6ufkdm2WUBsOuBGbBxveHs1X0IjT2tW9NGRmadEGBv00EUGy3gSa"
-            />
+            <Link to='/checkout'> checkout </Link>
           </span>
         )}
       </div>

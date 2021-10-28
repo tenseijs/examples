@@ -18,7 +18,7 @@ const Navbar: React.FunctionComponent<NavbarProp> = ({ cartItems }) => {
 
   return (
     <div className="flex justify-between mr-20 mt-6">
-      <h1 className="text-xl text-gray-700">The Ice Cream Shop</h1>
+      <Link to='/'><h1 className="text-xl text-gray-700">The Ice Cream Shop</h1></Link>
       <div className="text-2xl text-indigo-400">
         <Link to="/cart">
           <i className="fa fa-shopping-cart">
