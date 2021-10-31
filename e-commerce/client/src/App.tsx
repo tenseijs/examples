@@ -3,12 +3,19 @@ import React from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Product, ProductsQuery, useProductsQuery } from "./generated";
+import {
+  Product,
+  ProductsDocument,
+  ProductsQuery,
+  useProductsQuery,
+} from "./generated";
 
 import Navbar from "./components/Navbar";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
-import {Checkout} from './components/Checkout'
+import { Checkout } from "./components/Checkout";
+import PaymentSuccessful from "./components/PaymentSuccessful";
+import { isTemplateTail } from "typescript";
 
 export interface CartItem {
   product: Product;
@@ -31,14 +38,14 @@ const App = () => {
     return <div>Error!</div>;
   }
 
-  const onAddToCart = (clickedProduct: Product) => {
+  const onAddToCart = (product: Product) => {
     const findProductItem = cartItems.find(
-      (item) => item.product.id === clickedProduct.id
+      (item) => item.product.id === product.id
     );
 
     if (findProductItem) {
       const newItems = cartItems.map((item) => {
-        if (item.product.id === clickedProduct.id) {
+        if (item.product.id === product.id) {
           return {
             product: findProductItem.product,
             quantity: item.quantity + 1,
@@ -50,35 +57,49 @@ const App = () => {
       setCartItems(newItems);
     } else {
       const newItem = {
-        product: clickedProduct,
+        product: product,
         quantity: 1,
       };
       setCartItems([...cartItems, newItem]);
     }
   };
 
-  const onRemoveFromCart = (id: number) => {
-    setCartItems((findProductItem) =>
-      findProductItem.reduce((accumulator, item) => {
-        const itemId = parseInt(item.product.id);
-        if (itemId === id) {
-          if (item.quantity === 1) return accumulator;
-          return [...accumulator, { ...item, quantity: item.quantity - 1 }];
-        } else {
-          return [...accumulator, item];
-        }
-      }, [] as CartItem[])
+  const onRemoveFromCart = (product: Product) => {
+    const findProductItem = cartItems.find(
+      (item) => item.product.id === product.id
     );
+
+    if (findProductItem?.quantity === 1) {
+      const deleteItem = cartItems.filter((item) => item.product.id !== product.id)
+      setCartItems(deleteItem);
+    } else {
+      if (findProductItem) {
+        const newItem = cartItems.map((item) => {
+          if (item.product.id === product.id) {
+            return {
+              product: findProductItem.product,
+              quantity: item.quantity - 1,
+            };
+          }
+
+          return item;
+        });
+        setCartItems(newItem);
+      }
+    }
   };
+
+  const clearCart = () => setCartItems([]);
 
   return (
     <>
       <div className="flex justify-center">
         <div className="max-w-screen-lg flex flex-col min-h-screen w-full">
           <Router>
-            <Navbar cartItems={cartItems} />
+            {/*<Navbar cartItems={cartItems} />*/}
             <Switch>
               <Route exact path="/">
+                <Navbar cartItems={cartItems} />
                 <div className="flex-grow">
                   <div>
                     <div className="m-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 mt-8">
@@ -105,9 +126,13 @@ const App = () => {
                   onRemoveFromCart={onRemoveFromCart}
                 />
               </Route>
-              <Route path='/checkout'>
-                <Checkout cartItems={cartItems} />
-                </Route>
+              <Route path="/checkout">
+                <Navbar cartItems={cartItems} />
+                <Checkout cartItems={cartItems} clearCart={clearCart} />
+              </Route>
+              <Route path="/payment-success">
+                <PaymentSuccessful />
+              </Route>
             </Switch>
           </Router>
         </div>

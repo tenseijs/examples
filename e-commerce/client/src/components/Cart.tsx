@@ -1,7 +1,5 @@
 import React from "react";
 
-import StripeCheckout from "react-stripe-checkout";
-
 import { Link } from "react-router-dom";
 import { CartItem } from "../App";
 import { Product } from "../generated";
@@ -10,8 +8,8 @@ import CartItems from "./CartItems";
 
 type CartProps = {
   cartItems: CartItem[];
-  onAddToCart: (clickedProduct: Product) => void;
-  onRemoveFromCart: (id: number) => void;
+  onAddToCart: (product: Product) => void;
+  onRemoveFromCart: (product: Product) => void;
 };
 
 const Cart: React.FunctionComponent<CartProps> = ({
@@ -25,17 +23,6 @@ const Cart: React.FunctionComponent<CartProps> = ({
         accumulator + product.quantity * Number(product.product.price),
       0
     );
-
-  const getStripeTotal = (products: CartItem[]) =>
-    products.reduce(
-      (accumulator: number, product) =>
-        accumulator + product.quantity * Number(product.product.price) * 100,
-      0
-    );
-
-  const onToken = (token: any) => {
-    console.log(token);
-  };
 
   return (
     <>
@@ -69,18 +56,37 @@ const Cart: React.FunctionComponent<CartProps> = ({
         </div>
       </div>
       <div>
-        {cartItems.length === 0 ? null 
-          : ( 
+        {cartItems.length === 0 ? null : (
           <div>
-            <h2 className="text-lg text-gray-700 font-semibold" style={{ position: "absolute", right: "495px" }}>Total</h2>
-            <h2 className="text-lg text-gray-700 font-semibold" style={{ position: "absolute", right: "180px" }}> ${getTotal(cartItems)}</h2>
-            <p className="text-sm font-thin float-right mt-8 mr-20">Shipping and taxes will be calculated at checkout.</p>
+            <h2
+              className="text-lg text-gray-700 font-semibold"
+              style={{ position: "absolute", right: "495px" }}
+            >
+              Total
+            </h2>
+            <h2
+              className="text-lg text-gray-700 font-semibold"
+              style={{ position: "absolute", right: "180px" }}
+            >
+              {" "}
+              ${getTotal(cartItems)}
+            </h2>
           </div>
         )}
-        <br /><br /><br />
+        <br />
+        <br />
+        <br />
         {cartItems.length === 0 ? null : (
           <span className="float-right">
-            <Link to='/checkout'> checkout </Link>
+            <Link to="/checkout">
+              <div style={{ width: "370px"}} className="flex border border-gray-200 d hover:shadow-lg border-2 item-center px-8 py-3 font-semibold mb-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white">
+                <p className="ml-16">Checkout</p>
+                <i
+                  className="fa fa-long-arrow-right font-semibold ml-20 mt-2 text-white float-right"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </Link>
           </span>
         )}
       </div>

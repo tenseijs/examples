@@ -35,7 +35,7 @@ export default tensei()
           }
         })
 
-        const totalPrice = products.reduce((total, product)  => total + parseInt(product.price), 0)
+        const totalPrice = products.reduce((total:any, product:any)  => total + parseInt(product.price), 0)
 
         const paymentIntent = await stripe.paymentIntents.create({
           amount: totalPrice * 100,

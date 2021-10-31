@@ -5,8 +5,8 @@ import { Product } from "../generated";
 
 type CartItemProps = {
   cartItem: CartItem;
-  onAddToCart: (clickedProduct: Product) => void;
-  onRemoveFromCart: (id: number) => void;
+  onAddToCart: (product: Product) => void;
+  onRemoveFromCart: (product: Product) => void;
 };
 
 const CartItems: React.FunctionComponent<CartItemProps> = ({
@@ -14,7 +14,7 @@ const CartItems: React.FunctionComponent<CartItemProps> = ({
   onAddToCart,
   onRemoveFromCart,
 }) => {
-  const getCartItemPrice = Number(cartItem.product.price);
+  const getCartItemPrice = Number(cartItem.product.price) * (cartItem.quantity)
   return (
     <>
       <div className="border bg-gray-100 bg-opacity-50 hover:shadow-lg shadow-md">
@@ -35,10 +35,13 @@ const CartItems: React.FunctionComponent<CartItemProps> = ({
               <div className="mt-2 ml-10 text-base font-thin text-gray-700">
                 {cartItem.product.description}
               </div>
+              <h1 className="mt-2 text-md font-semibold text-gray-700 float-right mr-52">
+                ${cartItem.product.price}
+              </h1>
             </div>
             <div className="absolute right-60 text-red-500 border px-1 border-1 border-solid">
               <button
-                onClick={() => onRemoveFromCart(parseInt(cartItem.product.id))}
+                onClick={() => onRemoveFromCart(cartItem.product)}
               >
                 <i className="fa fa-trash-o" aria-hidden="true"></i>
               </button>
@@ -51,7 +54,7 @@ const CartItems: React.FunctionComponent<CartItemProps> = ({
                 <button
                   className="ml-2 mr-2 text-gray-400"
                   onClick={() =>
-                    onRemoveFromCart(parseInt(cartItem.product.id))
+                    onRemoveFromCart(cartItem.product)
                   }
                 >
                   -
@@ -66,7 +69,7 @@ const CartItems: React.FunctionComponent<CartItemProps> = ({
               </div>
             </div>
             <h1 className="mt-2 text-md font-semibold text-gray-700 float-right mr-8">
-              ${cartItem.product.price}
+              ${getCartItemPrice}
             </h1>
           </div>
        
