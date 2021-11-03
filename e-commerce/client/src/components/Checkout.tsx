@@ -1,4 +1,4 @@
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import {
   FunctionComponent,
@@ -19,11 +19,11 @@ export const Checkout: FunctionComponent<CheckoutProps> = ({
   cartItems,
   clearCart,
 }) => {
+  const history = useHistory();
+
   const [clientSecret, setClientSecret] = useState("");
   const [processing, setProcessing] = useState(false);
-  const [redirect, setRedirect] = useState(false);
   const [error, setError] = useState<null | string>();
-  const [succeeded, setSucceeded] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
   const { mutateAsync } = useCreatePaymentIntentMutation({
@@ -71,8 +71,7 @@ export const Checkout: FunctionComponent<CheckoutProps> = ({
       // if succedded, redirect to thank you page
       setError(null);
       setProcessing(false);
-      setSucceeded(true);
-      setRedirect(true);
+      history.push("/payment-success");
       clearCart();
     }
     // if failed, show the error
@@ -96,12 +95,8 @@ export const Checkout: FunctionComponent<CheckoutProps> = ({
           <span>{processing ? <div>Processing...</div> : "Pay now"}</span>
         </button>
       </form>
-      {error ? <div className="text-red-500 font-bold">Payment Failed!</div>: null}
-
-      {succeeded && redirect ? (
-        <>
-          <Redirect push to="/payment-success" />
-        </>
+      {error ? (
+        <div className="text-red-500 font-bold">Payment Failed!</div>
       ) : null}
     </>
   );

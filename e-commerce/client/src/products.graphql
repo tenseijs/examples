@@ -5,7 +5,6 @@ query Products {
       name
       price
       description
-      quantity
     }
 }
 

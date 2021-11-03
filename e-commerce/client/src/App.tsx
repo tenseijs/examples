@@ -15,7 +15,6 @@ import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
 import { Checkout } from "./components/Checkout";
 import PaymentSuccessful from "./components/PaymentSuccessful";
-import { isTemplateTail } from "typescript";
 
 export interface CartItem {
   product: Product;

@@ -1,4 +1,5 @@
 import { Stripe } from 'stripe'
+import { ProductModel } from '@tensei/orm'
 import { auth } from '@tensei/auth'
 import { graphql } from '@tensei/graphql'
 import { welcome, tensei, cors, resource, text, textarea, integer, graphQlQuery } from '@tensei/core'
@@ -35,7 +36,7 @@ export default tensei()
           }
         })
 
-        const totalPrice = products.reduce((total:any, product:any)  => total + parseInt(product.price), 0)
+        const totalPrice = products.reduce((total: number, product: ProductModel)  => total + (product.price), 0)
 
         const paymentIntent = await stripe.paymentIntents.create({
           amount: totalPrice * 100,
@@ -50,9 +51,8 @@ export default tensei()
     .fields([
       text('Image'),
       text('Name'),
-      text('Price'),
-      textarea('Description'),
-      integer('Quantity')
+      integer('Price'),
+      textarea('Description')
     ])
   ])
   .plugins([

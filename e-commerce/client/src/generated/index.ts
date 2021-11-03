@@ -41,8 +41,7 @@ export type CreateProductInput = {
   description: Scalars['String'];
   image: Scalars['String'];
   name: Scalars['String'];
-  price: Scalars['String'];
-  quantity: Scalars['Int'];
+  price: Scalars['Int'];
 };
 
 export type CreateUserInput = {
@@ -244,7 +243,6 @@ export type Product = {
   image?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['String']>;
-  quantity?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['String']>;
 };
 
@@ -265,7 +263,6 @@ export type ProductSubscriptionFilter = {
   image?: Maybe<StringWhereQuery>;
   name?: Maybe<StringWhereQuery>;
   price?: Maybe<StringWhereQuery>;
-  quantity?: Maybe<StringWhereQuery>;
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
@@ -279,7 +276,6 @@ export type ProductWhereQuery = {
   image?: Maybe<StringWhereQuery>;
   name?: Maybe<StringWhereQuery>;
   price?: Maybe<StringWhereQuery>;
-  quantity?: Maybe<StringWhereQuery>;
   updatedAt?: Maybe<StringWhereQuery>;
 };
 
@@ -371,8 +367,7 @@ export type UpdateProductInput = {
   description?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
-  price?: Maybe<Scalars['String']>;
-  quantity?: Maybe<Scalars['Int']>;
+  price?: Maybe<Scalars['Int']>;
 };
 
 export type UpdateUserInput = {
@@ -422,7 +417,7 @@ export type UserWhereQuery = {
 export type ProductsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ProductsQuery = { __typename?: 'Query', products?: Array<{ __typename?: 'Product', id: string, image?: string | null | undefined, name?: string | null | undefined, price?: string | null | undefined, description?: string | null | undefined, quantity?: string | null | undefined } | null | undefined> | null | undefined };
+export type ProductsQuery = { __typename?: 'Query', products?: Array<{ __typename?: 'Product', id: string, image?: string | null | undefined, name?: string | null | undefined, price?: string | null | undefined, description?: string | null | undefined } | null | undefined> | null | undefined };
 
 export type CreatePaymentIntentMutationVariables = Exact<{
   productCartItems: Array<Maybe<ProductCartItem>> | Maybe<ProductCartItem>;
@@ -440,7 +435,6 @@ export const ProductsDocument = `
     name
     price
     description
-    quantity
   }
 }
     `;
