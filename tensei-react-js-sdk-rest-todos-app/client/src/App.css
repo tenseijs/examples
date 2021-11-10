@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+ul {
+  width: 30vw;
+  margin: 0 auto;
+  list-style: none;
+  border: 1px solid rgb(143, 138, 138);
+  min-height: 10rem;
+  padding: 1rem;
+}
+li {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+span:nth-of-type(1) {
+  margin-left: 3rem;
+}
+span {
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+}
+input {
+  display: block;
+  margin: 1rem auto;
+  height: 2rem;
+  font-size: 1.3rem;
+}
+button {
+  width: 5rem;
+  height: 2rem;
+}
