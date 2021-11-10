@@ -1,11 +1,10 @@
-import { sdk } from "@tensei/sdk";
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { tensei } from "../../utils/tensei";
 
 export default function Create() {
 
   const navigate = useNavigate();
-  const tensei = sdk();
 
   const [error, setError] = useState("");
   const [book, setBook] = useState({

@@ -1,11 +1,11 @@
-import { sdk } from "@tensei/sdk"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import placeholder from '../../assets/placeholder.png';
 import { useNavigate } from "react-router-dom";
+import { tensei } from "../../utils/tensei";
 
 export default function Books() {
-  const tensei = sdk();
+  // const tensei = sdk();
   const [books, setBooks] = useState({});
   const [isFetching, setIsFetching] = useState(false);
   const [hasFetched, setHasFetched] = useState(false);

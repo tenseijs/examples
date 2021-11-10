@@ -1,12 +1,11 @@
-import { sdk } from "@tensei/sdk";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
+import { tensei } from "../../utils/tensei";
 
 export default function Book() {
 
   const navigate = useNavigate();
   const params = useParams();
-  const tensei = sdk();
   const [hasFetched, setHasFetched] = useState(false);
   const [canEdit, setCanEdit] = useState(false);
   const [error, setError] = useState("");
