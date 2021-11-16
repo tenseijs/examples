@@ -1,0 +1,13 @@
+query Products {
+    products {
+      id
+      image
+      name
+      price
+      description
+    }
+}
+
+mutation createPaymentIntent($productCartItems: [ProductCartItem]!) {
+  createPaymentIntent(productCartItems: $productCartItems)
+}
